@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
+
+:root {
+  --primary-color: #012b07;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+}
+
+p {
+  max-width: 35ch;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  text-decoration: line-through;
+}
+
+h1, p, a, span {
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: clamp(1.2rem, 1.2rem + 1vw, 2rem);
+}
+
+p, .slide > span {
+  font-size: clamp(.8rem, .8rem + 1vw, 1.25rem);
+  line-height: 1.6;
+}
+
+.container {
+  display: flex;
+}
+
+.dash, .challenge-container {
+  height: 100vh;
+  height: --webkit-fill-available;
+  width: 50%;
+  background-color: #fff;
+}
+
+.dash {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  /* position: relative; */
+}
+
+.dash > nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.dash .divider {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.dash > nav img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+.dash p {
+  margin: 3.5rem 0 1rem 0;
+}
+
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.body {
+  position: relative;
+}
+
+.slide-challenge {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide {
+  transition: transform 500ms ease, opacity 300ms ease;
+}
+
+.pause-indicator {
+  margin-left: 5px;
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.pause-indicator > i {
+  font-size: 2rem;
+}
+
+.challenge-container {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  border-left: 1px solid var(--primary-color);
+  /* cursor: url('images/cursor.png'), crosshair; */
+  z-index: 1;
+}
+
+.challenge {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.challenge > a {
+  padding: clamp(1rem, 1rem + 1vw, 3rem);
+}
+
+.challenge > img {
+  max-width: 200px;
+  align-self: center;
+  margin-right: 4rem;
+  opacity: 0;
+  transition: opacity 400ms ease;
+}
+
+.challenge:hover > img {
+  opacity: 1;
+}
+
+.challenge:not(:nth-of-type(1)) {
+  border-top: 1px solid var(--primary-color);
+}

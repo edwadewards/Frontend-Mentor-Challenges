@@ -4,10 +4,92 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="images/frontend-mentor.webp">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
   <title>Frontend Mentor Challenges</title>
 </head>
 <body>
-  <a href="social-media_dashboard/dashboard.html">Social Media Dashboard</a>
+  <div class="container">
+
+    <main class="dash">
+      <nav>
+        <a href="https://www.frontendmentor.io/profile/edwadewards" target="_blank" title="my frontend mentor profile">
+          <img src="images/frontend-mentor.webp" alt="frontend-mentor logo">
+        </a>
+        <span class="divider">|</span>
+        <a href="https://github.com/edwadewards" target="_blank">Github</a>
+      </nav>
+      <section class="body">
+        <div class="slide slide-home" data-autoplay-hover="on">
+          <h1>Frontend Mentor Challenges</h1>
+          <p>
+            This website is a collection of challenges that I have completed from <a href="https://www.frontendmentor.io/home" target="_blank">frontendmentor.com</a>. These challenges were super fun and really advanced my skills in HTML, CSS and Javascript. Click the links in the boxes to see live solutions to the challenges.
+          </p>
+          <span>1/5</span>
+          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
+        </div>
+        <div class="slide slide-challenge">
+          <h1>Social Media Dashboard</h1>
+          <p>
+            For this challenge I had to recreate several cards with social media analytics and create a dark mode toggle. I was able to recreate this utilizing CSS grid without any media queries. The dark mode toggle was made by storing colors in CSS variables and using Javascript to toggle the dark mode class on and off. As a bonus, I learned to use local storage to save the user's preference on future visits.
+          </p>
+          <span>2/5</span>
+          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
+        </div>
+        <div class="slide slide-challenge">
+          <h1>Super Awesome Project</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi ac sodales ipsum. Sed ultricies elit sit amet auctor sodales. Nullam vehicula enim ac libero ultricies viverra. Sed convallis mollis sapien sed vulputate. Cras euismod faucibus.
+          </p>
+          <span>3/5</span>
+          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
+        </div>
+        <div class="slide slide-challenge">
+          <h1>Even Btter Project</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu gravida mauris. Aenean vestibulum sem et risus interdum facilisis. Suspendisse faucibus cursus nibh id facilisis. Suspendisse tincidunt ipsum eu lectus iaculis, sed tincidunt sem molestie. Phasellus eget posuere erat. Nullam eu sem rutrum metus pellentesque hendrerit. Nunc.
+          </p>
+          <span>4/5</span>
+          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
+        </div>
+        <div class="slide slide-challenge">
+          <h1>Terrible Clone of Something</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate enim eget elit efficitur faucibus. Cras vel turpis quis dolor posuere sodales id eu leo. Ut.
+          </p>
+          <span>5/5</span>
+          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
+        </div>
+      </section>
+      <footer>
+        <a href="https://www.wadecedwards.com/" target="_blank" title="wadecedwards.com">
+          <img src="images/we-logo.png" alt="logo for wadecedwards.com">
+        </a>
+      </footer>
+    </main>
   
+    <section class="challenge-container">
+      <div class="challenge">
+        <a href="social-media_dashboard/dashboard.html" target="_blank">Social Media Dashboard</a>
+        <img src="images/social-media_dashboard.png" alt="screenshot of project">
+      </div>
+      <div class="challenge">
+        <a href="social-media_dashboard/dashboard.html" target="_blank">Social Media Dashboard</a>
+        <img src="images/social-media_dashboard.png" alt="screenshot of project">
+      </div>
+      <div class="challenge">
+        <a href="social-media_dashboard/dashboard.html" target="_blank">Social Media Dashboard</a>
+        <img src="images/social-media_dashboard.png" alt="screenshot of project">
+      </div>
+      <div class="challenge">
+        <a href="social-media_dashboard/dashboard.html" target="_blank">Social Media Dashboard</a>
+        <img src="images/social-media_dashboard.png" alt="screenshot of project">
+      </div>
+    </section>
+
+  </div>
+  
+  <script src="main.js"></script>
 </body>
 </html>
