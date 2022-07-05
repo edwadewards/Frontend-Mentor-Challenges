@@ -53,3 +53,7 @@ function zoom(e){
   y = offsetY/zoom.offsetHeight*100
   zoom.style.backgroundPosition = x + '% ' + y + '%';
 }
+
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
