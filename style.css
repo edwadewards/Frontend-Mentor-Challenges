@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500&display=swap');
 
 :root {
-  /* --primary-color: #012b07; */
-  --primary-color: #064d1c;
+  --primary-color: #012b07;
 }
 
 * {
@@ -16,8 +15,9 @@ html {
   font-weight: 400;
 }
 
-p {
-  max-width: 35ch;
+body {
+  background-color: #fff;
+  overflow-x: hidden;
 }
 
 a {
@@ -41,24 +41,15 @@ p, .slide > span {
   line-height: 1.6;
 }
 
-.container {
-  display: flex;
-}
-
-.dash, .challenge-container {
-  height: 100vh;
-  height: --webkit-fill-available;
-  width: 50%;
-  background-color: #fff;
-}
-
 .dash {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  padding: 1rem 4rem;
-  /* position: relative; */
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  padding: 1rem;
+  text-align: center;
+  min-height: 65vh;
 }
 
 .dash > nav {
@@ -79,13 +70,7 @@ p, .slide > span {
 }
 
 .dash p {
-  margin: 3.5rem 0 1rem 0;
-}
-
-footer {
-  width: 100%;
-  display: flex;
-  justify-content: flex-end;
+  margin: 1.55rem 0 .85rem 0;
 }
 
 .body {
@@ -99,7 +84,7 @@ footer {
 }
 
 .slide {
-  transition: transform 500ms ease, opacity 300ms ease;
+  transition: transform 500ms ease, opacity 200ms ease;
 }
 
 .pause-indicator {
@@ -133,8 +118,10 @@ footer {
 
 .zoom {
   width: 65%;
-  height: 190px;
+  height: 100%;
+  min-height: 170px;
   position: relative;
+  z-index: 5;
   overflow: hidden;
   cursor: pointer;
   opacity: 0;
@@ -158,6 +145,35 @@ footer {
   background: url(images/e-commerce.jpg); 
 }
 
-.challenge:not(:nth-of-type(1)) {
+.challenge {
   border-top: 1px solid var(--primary-color);
+}
+
+@media (min-width: 920px) {
+  .container {
+    display: flex;
+  }
+  p {
+    max-width: 35ch;
+  }
+  .dash, .challenge-container {
+    height: 100vh;
+    height: --webkit-fill-available;
+    width: 50%;
+  }
+  .dash {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 7rem;
+    padding: 1rem 4rem;
+    text-align: left;
+  }
+  .dash p {
+    margin: 3.5rem 0 1rem 0;
+  }
+  .challenge:nth-of-type(1) {
+    border-top: 0;
+  }
 }
