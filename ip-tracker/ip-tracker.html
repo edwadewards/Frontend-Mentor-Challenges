@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <link rel="shortcut icon" href="../images/frontend-mentor.webp" type="image/x-icon"> -->
+  <link rel="stylesheet" href="ip-tracker.css">
+  <title>Challenge | IP Address Tracker</title>
+</head>
+<body>
+  <main>
+    <section class="dash">
+      <div class="form-container">
+        <h1>IP Address Tracker</h1>
+        <form action="" id="search">
+          <input type="text" id="input-value" placeholder="Search For Any IP Address or Domain">
+          <button type="submit" id="submit"><img src="images/icon-arrow.svg"></button>
+        </form>
+      </div>
+      <div class="output-box">
+        <div class="ip">
+          <h2>IP Address</h2>
+          <span data-ip>192.212.174.101</span>
+        </div>
+        <div class="location border-left">
+          <h2>Location</h2>
+          <span data-location>Brooklyn, NY 10001</span>
+        </div>
+        <div class="timezone border-left">
+          <h2>Timezone</h2>
+          <span data-timezone>UTC -05:00</span>
+        </div>
+        <div class="isp border-left">
+          <h2>ISP</h2>
+          <span data-isp>SpaceX Starlink</span>
+        </div>
+      </div>
+    </section>
+    <div class="map-container">
+      <canvas id="map">
+        
+      </canvas>
+    </div>
+  </main>
+
+  <script src="ip-tracker.js"></script>
+</body>
+</html>
