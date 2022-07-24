@@ -100,6 +100,7 @@ form > button:hover {
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 3px 3px #ddd;
+  z-index: 5;
 }
 
 @media (min-width: 800px) {
@@ -131,4 +132,8 @@ form > button:hover {
   color: var(--dark-gray);
   font-size: 1.2rem;
   font-weight: 500;
+}
+
+#map{
+  z-index: 0;
 }
