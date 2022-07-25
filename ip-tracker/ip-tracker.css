@@ -113,6 +113,10 @@ form > button:hover {
   }
   .output-box > .border-left {
     border-left: 1px solid var(--primary-gray);
+    height: 100%;
+  }
+  .output-box > div {
+    margin-bottom: auto;
   }
   .output-box > div {
     padding: 0 2rem;

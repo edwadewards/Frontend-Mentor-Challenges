@@ -18,9 +18,9 @@ input.addEventListener("keypress", (event) => {
 
 
 function tracker() {
-  let api_key = 'at_2ZjVAR1pCOsRjzuYGEQMpzV7AXhmE';
+  let apiKey = 'at_2ZjVAR1pCOsRjzuYGEQMpzV7AXhmE';
   let url = "https://geo.ipify.org/api/v2/country,city?apiKey=" +
-  api_key +
+  apiKey +
   "&ipAddress=" +
   input.value;
 
@@ -39,13 +39,14 @@ function getData(data) {
   `${data.location.city}, ${data.location.region} ${data.location.postalCode}`;
   document.querySelector('[data-timezone]').innerHTML = data.location.timezone;
   document.querySelector('[data-isp]').innerHTML = data.isp;
+
+  let lat = data.location.lat;
+  let lng = data.location.lng;
+
+  const container = L.DomUtil.get('map');
+  if (container != null) {
+    container._leaflet_id = null;
+  }
+
+  setMap(lat, lng);
 }
-
-
-// var map = L.map('map').setView([51.5, -0.09], 13);
-// L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-//     maxZoom: 19,
-//     attribution: '© OpenStreetMap'
-// }).addTo(map);
-// var marker = document.getElementById('marker');
-// L.marker([51.5, -0.09]).addTo(map);
