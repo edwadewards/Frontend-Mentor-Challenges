@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="images/frontend-mentor.webp">
+  <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
   <title>Frontend Mentor Challenges</title>
@@ -13,74 +13,75 @@
   <div class="container">
 
     <main class="dash">
-      <nav>
-        <a href="https://www.frontendmentor.io/profile/edwadewards" target="_blank" title="my frontend mentor profile">
-          <img src="images/frontend-mentor.webp" alt="frontend-mentor logo">
-        </a>
-        <span class="divider">|</span>
-        <a href="https://github.com/edwadewards" target="_blank">Github</a>
-      </nav>
-      <section class="body">
-        <div class="slide slide-home" data-autoplay-hover="on">
+      <section class="intro">
+        <article>
           <h1>Frontend Mentor Challenges</h1>
           <p>
-            This website is a collection of challenges that I have completed from <a href="https://www.frontendmentor.io/home" target="_blank">frontendmentor.com</a>. These challenges were super fun and really advanced my skills in HTML, CSS and Javascript. Click the links in the boxes to see live solutions to the challenges.
+            This website contains all my solutions to the popular coding challenge website <a href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor</a>. Click the links in the boxes to see live solutions to the challenges.
           </p>
-          <span>1/5</span>
-          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
+        </article>
+      </section>
+      <section class="slide-body">
+        <div class="pagination">
+          <span class="prev-slide">
+            <i class="fa-solid fa-circle-left"></i>
+          </span>
+          <div class="pagination-markers">
+            <div class="marker util-social-bg"></div>
+            <div class="marker util-advice-bg"></div>
+            <div class="marker util-ip-bg"></div>
+            <div class="marker util-ecomm-bg"></div>
+          </div>
+          <span class="next-slide">
+            <i class="fa-solid fa-circle-right"></i>
+          </span>
         </div>
-        <div class="slide slide-challenge">
-          <h1>Social Media Dashboard</h1>
-          <p>
-            For this challenge I had to recreate several cards with social media analytics and create a dark mode toggle. I was able to recreate this utilizing CSS grid without any media queries. The dark mode toggle was made by storing colors in CSS variables and using Javascript to toggle the dark mode class on and off. As a bonus, I learned to use local storage to save the user's preference on future visits.
-          </p>
-          <span>2/5</span>
-          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
-        </div>
-        <div class="slide slide-challenge">
-          <h1>Advice Generator</h1>
-          <p>
-            API that displays a random piece of advice on every click of the dice. This is my first attempt at using XHR on a real project after using fetch in the past. 
-          </p>
-          <span>3/5</span>
-          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
-        </div>
-        <div class="slide slide-challenge">
-          <h1>IP Address Tracker</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu gravida mauris. Aenean vestibulum sem et risus interdum facilisis. Suspendisse faucibus cursus nibh id facilisis. Suspendisse tincidunt ipsum eu lectus iaculis, sed tincidunt sem molestie. Phasellus eget posuere erat. Nullam eu sem rutrum metus pellentesque hendrerit. Nunc.
-          </p>
-          <span>4/5</span>
-          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
-        </div>
-        <div class="slide slide-challenge">
-          <h1>E-commerce Product Page</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate enim eget elit efficitur faucibus. Cras vel turpis quis dolor posuere sodales id eu leo. Ut.
-          </p>
-          <span>5/5</span>
-          <span class="pause-indicator"><i class="fa-solid fa-circle-pause"></i></span>
+        <div class="slide-container">
+          <div class="slide slide-challenge" id="social">
+            <h2>Social Media Dashboard</h2>
+            <p>
+              Social media analytics dashboard with theme switcher. Techniques used include CSS Grid, CSS variables to store light and dark mode styles, event listeners, local storage.
+            </p>
+          </div>
+          <div class="slide slide-challenge" id="advice">
+            <h2>Advice Generator</h2>
+            <p>
+              Advice generator API app. Click the dice to generate a new piece of advice. Techniques used include AJAX and DOM manipulation.
+            </p>
+          </div>
+          <div class="slide slide-challenge" id="ip">
+            <h2>IP Address Tracker</h2>
+            <p>
+              IP address tracker combining Geolocation API and map generator API - LeafletJS. Techniques used include fetch, event listeners, DOM manipulation.
+            </p>
+          </div>
+          <div class="slide slide-challenge" id="ecomm">
+            <h2>E-commerce Product Page</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vulputate enim eget elit efficitur faucibus. Cras vel turpis quis dolor posuere sodales id eu leo. Ut.
+            </p>
+          </div>
         </div>
       </section>
     </main>
   
     <section class="challenge-container">
-      <div class="challenge">
+      <div class="challenge util-social-bg">
         <a href="social-media_dashboard/dashboard.html" target="_blank">Social Media Dashboard</a>
         <div class="zoom social-media-dash" onmousemove="zoom(event)">
         </div>
       </div>
-      <div class="challenge">
+      <div class="challenge util-advice-bg">
         <a href="advice-generator/advice-generator.html" target="_blank">Advice Generator</a>
         <div class="zoom advice-generator" onmousemove="zoom(event)">
         </div>
       </div>
-      <div class="challenge">
+      <div class="challenge util-ip-bg">
         <a href="ip-tracker/ip-tracker.html" target="_blank">IP Address Tracker</a>
         <div class="zoom ip-tracker" onmousemove="zoom(event)">
         </div>
       </div>
-      <div class="challenge">
+      <div class="challenge util-ecomm-bg">
         <a href="e-commerce/e-commerce.html" target="_blank">E-commerce Product Page</a>
         <div class="zoom e-commerce" onmousemove="zoom(event)">
         </div>

@@ -1,23 +1,35 @@
+const slides = document.querySelectorAll('.slide');
+const markers = document.querySelectorAll('.marker');
+
 let indexValue = 0;
 function slideShow() {
-  // setTimeout(slideShow, 9000);
-  let x;
-  const slides = document.querySelectorAll('.slide');
-  for(x = 0; x < slides.length; x++) {
+  for(let x = 0; x < slides.length; x++) {
     slides[x].style.opacity = '0';
-    slides[x].style.transform = 'translateX(240px)';
+    slides[x].style.transform = 'translateX(900px)';
   }
+
+  for(let i = 0; i < markers.length; i++) {
+    markers[i].style.background = '';
+  }
+
   indexValue++;
   if(indexValue > slides.length) {
     indexValue = 1;
   }
-    slides[indexValue - 1].style.opacity = '1';
-    slides[indexValue - 1].style.transform = 'translateX(0)';  
+
+  if(indexValue > markers.length) {
+    indexValue = 1;
+  }
+
+  slides[indexValue - 1].style.opacity = '1';
+  slides[indexValue - 1].style.transform = 'translateX(0)';
+  markers[indexValue - 1].style.background = 'var(--accent-color)';
 }
+
 var interval = setInterval(slideShow, 4000);
 slideShow();
 
-const slides = document.querySelectorAll('.slide');
+
 slides.forEach(slide => {
   slide.addEventListener('mouseenter', () => {
     pauseSlides();
