@@ -15,7 +15,7 @@
 
 html {
   font-family: 'Nunito', sans-serif;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 body {
@@ -63,6 +63,7 @@ p {
   grid-template-rows: repeat(2, 1fr);
   background-color: #f4f4f4;
   min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .intro {
@@ -95,6 +96,18 @@ p {
 
 .pagination i {
   font-size: 2rem;
+}
+
+.slide-btn {
+  cursor: pointer;
+}
+
+.slide-btn:hover {
+  transform: scale(1.02);
+}
+
+.slide.active {
+  transform: translateX(0);
 }
 
 .pagination-markers {
@@ -137,7 +150,6 @@ p {
 .challenge-container {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  border-left: var(--border);
   z-index: 3;
 }
 
@@ -192,25 +204,10 @@ p {
   .dash, .challenge-container {
     width: 50%;
   }
-  /* .dash {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 7rem;
-    padding: 1rem 4rem;
-    text-align: left;
+  .challenge-container {
+    border-left: var(--border);
   }
-  .dash p {
-    margin: 3.5rem 0 1rem 0;
-  } */
   .challenge:nth-of-type(1) {
     border-top: 0;
-  }
-}
-
-@media (max-width: 400px) {
-  .dash {
-    height: 100vh;
   }
 }
