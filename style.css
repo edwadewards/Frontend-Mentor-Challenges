@@ -24,8 +24,6 @@ body {
 
 .container {
   overflow-x: hidden;
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
 }
 
 a {
@@ -59,11 +57,11 @@ p {
 .util-ecomm-bg {background-color: #f9fceb;}
 
 .dash {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   background-color: #f4f4f4;
-  min-height: 100vh;
-  min-height: calc(var(--vh, 1vh) * 100);
 }
 
 .intro {
@@ -83,7 +81,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 2rem;
+  gap: clamp(1rem, 1rem + 1vw, 2rem);
 }
 
 .pagination {
@@ -91,7 +89,7 @@ p {
   align-items: center;
   justify-content: space-around;
   padding: 1rem;
-  width: max(90%, 500px);
+  width: min(90%, 700px);
 }
 
 .pagination i {
@@ -136,7 +134,7 @@ p {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 2rem;
+  padding: clamp(1rem, 1rem + 1vw, 2rem);
 }
 
 .slide-challenge > p {
@@ -148,6 +146,8 @@ p {
 }
 
 .challenge-container {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   z-index: 3;
